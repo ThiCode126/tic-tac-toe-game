@@ -1,0 +1,38 @@
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--dark-navy);
+  color: var(--silver);
+}
+
+.cw {
+  width: 328px;
+  margin: 0 auto;
+}
+
+.sro {
+  display: none;
+  visibility: hidden;
+} // Screen Reader Only
+
+:where(h1, h2, h3, h4, h5, h6, p) {
+  @include mY(0);
+}
+
+:where(a, button) {
+  cursor: pointer;
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  .cw {
+    width: 460px;
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+}
