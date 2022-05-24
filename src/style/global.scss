@@ -22,6 +22,49 @@ body {
   cursor: pointer;
 }
 
+.heading-l {
+  font-weight: 700;
+  @include text(40px, 50px, 2.5px);
+  text-transform: uppercase;
+}
+.heading-m {
+  font-weight: 700;
+  @include text(24px, 30px, 1.5px);
+  text-transform: uppercase;
+}
+.heading-s {
+  font-weight: 700;
+  @include text(20px, 25px, 1.5px);
+  text-transform: uppercase;
+}
+.heading-xs {
+  font-weight: 700;
+  @include text(16px, 20px, 1px);
+  text-transform: uppercase;
+}
+.body-text {
+  @include text(14px, 18px, 0.875px);
+}
+
+button.primary {
+  border-radius: 15px;
+  color: var(--dark-navy);
+  &.yellow {
+    box-shadow: inset 0px -8px 0px #cc8b13;
+    background-color: var(--light-yellow);
+    &:hover {
+      background-color: var(--light-yellow-hover);
+    }
+  }
+  &.blue {
+    box-shadow: inset 0px -8px 0px #118c87;
+    background-color: var(--light-blue);
+    &:hover {
+      background-color: var(--light-blue-hover);
+    }
+  }
+}
+
 /**
 * ? Tablet
 */

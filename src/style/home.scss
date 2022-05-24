@@ -1,0 +1,81 @@
+#home {
+  @include mY(119px);
+  text-align: center;
+  .cw {
+    .body {
+      @include mY(32px);
+      padding: 24px 24px 30px;
+      background-color: var(--semi-dark-navy);
+      box-shadow: inset 0px -8px 0px #10212a;
+      border-radius: 15px;
+
+      .toggle-mark {
+        cursor: pointer;
+        @include mY(24px, 17px);
+        background-color: var(--dark-navy);
+        border-radius: 10px;
+        padding: 9px 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .icon {
+          height: 54px;
+          border-radius: 10px;
+          background-color: transparent;
+          transition: all 0.4s;
+          svg {
+            transform: scale(0.5) translateY(-10px);
+          }
+        }
+        &.mark-o {
+          .icon-o {
+            background-color: var(--silver);
+            svg {
+              path {
+                fill: var(--dark-navy);
+              }
+            }
+          }
+          .icon-x {
+            svg {
+              path {
+                fill: var(--silver);
+              }
+            }
+          }
+        }
+        &.mark-x {
+          .icon-x {
+            background-color: var(--silver);
+            svg {
+              path {
+                fill: var(--dark-navy);
+              }
+            }
+          }
+          .icon-o {
+            svg {
+              path {
+                fill: var(--silver);
+              }
+            }
+          }
+        }
+      }
+      .remember {
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+    }
+    .footer {
+      button.primary {
+        width: 100%;
+        height: 56px;
+        @include flexCenter;
+
+        &:first-child {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
