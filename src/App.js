@@ -11,7 +11,7 @@ function App() {
   const [isP1X, setIsP1X] = useState(false);
 
   return isGame ?
-    <Game is2Players={is2Players} isP1X={isP1X} /> :
+    <Game setIsGame={setIsGame} is2Players={is2Players} isP1X={isP1X} /> :
     <Home
       setIsGame={setIsGame}
       setIs2Players={setIs2Players}

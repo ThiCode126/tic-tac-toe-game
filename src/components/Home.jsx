@@ -6,7 +6,6 @@ import { ReactComponent as IconO } from "../assets/icon-o.svg";
 
 const Home = ({ isP1X, setIs2Players, setIsGame, setIsP1X }) => {
   const setNewGame = (type) => {
-    console.log(type);
     if (type === "cpu") {
       setIs2Players(false);
     } else if (type === "2players") {

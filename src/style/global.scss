@@ -24,12 +24,12 @@ body {
 
 .heading-l {
   font-weight: 700;
-  @include text(40px, 50px, 2.5px);
+  @include text(24px, 30px, 1.5px);
   text-transform: uppercase;
 }
 .heading-m {
   font-weight: 700;
-  @include text(24px, 30px, 1.5px);
+  @include text(20px, 25px, 1.25px);
   text-transform: uppercase;
 }
 .heading-s {
@@ -39,11 +39,16 @@ body {
 }
 .heading-xs {
   font-weight: 700;
+  @include text(14px, 18px, 0.875px);
+  text-transform: uppercase;
+}
+.heading-xxs {
+  font-weight: 700;
   @include text(16px, 20px, 1px);
   text-transform: uppercase;
 }
 .body-text {
-  @include text(14px, 18px, 0.875px);
+  @include text(12px, 15px, 0.75px);
 }
 
 button.primary {
@@ -64,6 +69,24 @@ button.primary {
     }
   }
 }
+button.secondary {
+  border-radius: 10px;
+  color: var(--dark-navy);
+  &.yellow {
+    box-shadow: inset 0px -4px 0px #cc8b13;
+    background-color: var(--light-yellow);
+    &:hover {
+      background-color: var(--light-yellow-hover);
+    }
+  }
+  &.grey {
+    box-shadow: inset 0px -4px 0px #6b8997;
+    background-color: var(--silver);
+    &:hover {
+      background-color: var(--silver-hover);
+    }
+  }
+}
 
 /**
 * ? Tablet
@@ -71,6 +94,18 @@ button.primary {
 @media (min-width: 768px) {
   .cw {
     width: 460px;
+  }
+  .heading-l {
+    @include text(40px, 50px, 2.5px);
+  }
+  .heading-m {
+    @include text(24px, 30px, 1.5px);
+  }
+  .heading-xs {
+    @include text(16px, 20px, 1px);
+  }
+  .body-text {
+    @include text(14px, 18px, 0.875px);
   }
 }
 

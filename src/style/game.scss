@@ -1,0 +1,145 @@
+#game {
+  @include mY(24px, 127px);
+  .cw {
+    .header {
+      @include flexSpaceBetween;
+
+      .turn {
+        background: var(--semi-dark-navy);
+        box-shadow: inset 0px -4px 0px #10212a;
+        border-radius: 5px;
+        padding: 9px 15px 13px;
+        @include flexSpaceBetween;
+        gap: 9px;
+        img {
+          @include wh(16px);
+        }
+      }
+      button.restart {
+        @include wh(40px);
+        @include flexCenter;
+        padding: 0;
+        background: var(--silver);
+        box-shadow: inset 0px -4px 0px #6b8997;
+        border-radius: 5px;
+        border: none;
+        img {
+          @include wh(15.38px);
+        }
+      }
+    }
+    .body {
+      @include mY(64px, 20px);
+      @include flexSpaceBetween;
+      gap: 20px;
+      flex-wrap: wrap;
+      .box {
+        @include wh(96px);
+        @include flexCenter;
+        background-color: var(--semi-dark-navy);
+        box-shadow: inset 0px -8px 0px #10212a;
+        border-radius: 10px;
+        padding-bottom: 8px;
+        &.click {
+          cursor: pointer;
+        }
+        .icon {
+          @include wh(40px);
+
+          &.now-x {
+            content: url("./../assets/icon-x.svg");
+          }
+          &.now-o {
+            content: url("./../assets/icon-o.svg");
+          }
+        }
+        &:hover {
+          .next-x {
+            content: url("./../assets/icon-x-outline.svg");
+          }
+          .next-o {
+            content: url("./../assets/icon-o-outline.svg");
+          }
+        }
+
+        // &:hover:after {
+        //   content: url("./../assets/icon-o-outline.svg");
+        //   display: block;
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        // }
+      }
+    }
+    .footer {
+      @include flexSpaceBetween;
+
+      .case {
+        @include wh(96px, 64px);
+        @include flexCenter;
+        flex-direction: column;
+        border-radius: 10px;
+        color: var(--dark-navy);
+        &.x {
+          background-color: var(--light-blue);
+        }
+        &.ties {
+          background-color: var(--silver);
+        }
+        &.o {
+          background-color: var(--light-yellow);
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #game {
+    @include mY(201px, 200px);
+    .cw {
+      .header {
+        .turn {
+          padding: 13px 30px 18px;
+          @include flexSpaceBetween;
+          gap: 13px;
+          img {
+            @include wh(20px);
+          }
+        }
+        button.restart {
+          @include wh(52px);
+          img {
+            @include wh(20px);
+          }
+        }
+      }
+      .body {
+        .box {
+          @include wh(140px);
+          img {
+            @include wh(64px);
+          }
+        }
+      }
+      .footer {
+        .case {
+          @include wh(140px, 72px);
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #game {
+    @include mY(139px, 2138px);
+  }
+}
